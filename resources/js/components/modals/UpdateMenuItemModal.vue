@@ -195,6 +195,7 @@ export default {
 
     fields() {
       if (this.update) {
+        return this.newItem.fields;
         return this.linkType.class === this.newItem.class ? this.newItem.fields : this.linkType.fields;
       }
       return this.linkType.fields || [];
